@@ -1,0 +1,83 @@
+/* Toast Notification (Stealth Indicators) */
+.quiz-solver-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Fainter (10% less from 0.25) */
+    color: transparent;
+    width: 4px;
+    /* 40% smaller (7px -> 4px) */
+    height: 4px;
+    border-radius: 50%;
+    z-index: 100000;
+    pointer-events: none;
+    backdrop-filter: blur(1px);
+    /* Minimal blur */
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s;
+}
+
+/* Specific Indicator Styles - Adjusted Opacity */
+.indicator-crop {
+    background-color: rgba(0, 255, 0, 0.3);
+    /* Fader Green */
+}
+
+.indicator-analyze {
+    background-color: rgba(255, 0, 0, 0.3);
+    /* Fader Red */
+    border-radius: 1px;
+    /* Square */
+}
+
+.indicator-answer {
+    background-color: rgba(0, 200, 255, 0.3);
+    /* Fader Blue */
+}
+
+.indicator-error {
+    background-color: rgba(255, 165, 0, 0.35);
+    /* Fader Orange */
+}
+
+/* Crop Overlay (Invisible) */
+#quiz-solver-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99998;
+    cursor: default;
+    /* Default cursor for stealth */
+    pointer-events: auto;
+}
+
+/* Answer Display (Stealth - Transparent) */
+#quiz-solver-answer {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: transparent;
+    color: rgba(238, 238, 238, 0.5);
+    /* Text 50% opacity */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    /* Fader shadow */
+    border: none;
+    padding: 0;
+    z-index: 100000;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    overflow-y: auto;
+    cursor: default;
+    user-select: text;
+    text-align: right;
+    /* Align text to right for stealth look */
+}
+
+#quiz-solver-answer h3 {
+    display: none;
+}

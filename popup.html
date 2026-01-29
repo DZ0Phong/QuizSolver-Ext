@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz Solver Config</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Quiz Solver</h1>
+            <label class="switch">
+                <input type="checkbox" id="masterSwitch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="status" id="statusMessage">Extension Disabled</div>
+
+        <div class="settings">
+            <h2>Key Bindings</h2>
+            <div class="input-group">
+                <label for="keyCrop">Crop:</label>
+                <input type="text" id="keyCrop" maxlength="1" value="7">
+            </div>
+            <div class="input-group">
+                <label for="keyAnalyze">Analyze:</label>
+                <input type="text" id="keyAnalyze" maxlength="1" value="8">
+            </div>
+            <div class="input-group">
+                <label for="keyShow">Show Answer:</label>
+                <input type="text" id="keyShow" maxlength="1" value="9">
+            </div>
+            <button id="saveBtn">Save Settings</button>
+        </div>
+
+        <div class="footer">
+            <button id="loginBtn" class="secondary-btn">Login to Puter</button>
+        </div>
+    </div>
+    <script src="puter.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
