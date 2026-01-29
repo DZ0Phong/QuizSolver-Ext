@@ -29,7 +29,7 @@ async function setupOffscreenDocument(path) {
 }
 
 chrome.runtime.onInstalled.addListener(() => {
-    setupOffscreenDocument('offscreen.html');
+    setupOffscreenDocument('html/offscreen.html');
 });
 
 // Message Listener
