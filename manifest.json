@@ -8,7 +8,7 @@
         "128": "icons/icon128.png"
     },
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "html/popup.html",
         "default_title": "QuizSolver",
         "default_icon": {
             "48": "icons/icon48.png",
@@ -16,7 +16,7 @@
         }
     },
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "js/background.js"
     },
     "permissions": [
         "storage",
@@ -30,17 +30,17 @@
                 "<all_urls>"
             ],
             "js": [
-                "content.js"
+                "js/content.js"
             ],
             "css": [
-                "content.css"
+                "css/content.css"
             ]
         }
     ],
     "web_accessible_resources": [
         {
             "resources": [
-                "content.css"
+                "css/content.css"
             ],
             "matches": [
                 "<all_urls>"

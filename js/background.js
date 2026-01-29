@@ -45,7 +45,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             }
 
             // Send full image + coords to Offscreen for cropping
-            setupOffscreenDocument('offscreen.html').then(() => {
+            setupOffscreenDocument('html/offscreen.html').then(() => {
                 chrome.runtime.sendMessage({
                     target: 'offscreen',
                     action: 'CROP_AND_STORE',
@@ -58,7 +58,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     else if (request.action === "ANALYZE_LAST_CROP") {
         // Trigger analysis in Offscreen
-        setupOffscreenDocument('offscreen.html').then(() => {
+        setupOffscreenDocument('html/offscreen.html').then(() => {
             chrome.runtime.sendMessage({
                 target: 'offscreen',
                 action: 'ANALYZE_IMAGE'
