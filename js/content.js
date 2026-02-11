@@ -28,6 +28,7 @@ function updateConfig(newValues) {
 document.addEventListener('keydown', (e) => {
     if (!config.isActive) return;
 
+    if (!e.key) return;
     const key = e.key.toUpperCase();
 
     if (key === config.keyCrop) {

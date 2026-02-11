@@ -37,8 +37,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     if (request.action === "Process_CROP") {
         // Content script sent crop coordinates. 
-        // We capture the visible tab first.
-        chrome.tabs.captureVisibleTab(null, { format: 'png' }, (dataUrl) => {
+        // We capture the visible tab of the SENDER's window.
+        chrome.tabs.captureVisibleTab(sender.tab.windowId, { format: 'png' }, (dataUrl) => {
             if (chrome.runtime.lastError || !dataUrl) {
                 console.error("Capture failed:", chrome.runtime.lastError);
                 return;
